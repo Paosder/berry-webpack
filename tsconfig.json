@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "composite": true,
+    "sourceMap": true,
+    "target": "es2020",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@common/*": ["./src/test/common/*"],
+      "@paosder/gl-variable": ["./src/variable.ts"]
+    }
+  },
+  "include": ["src/**/*"]
+}
