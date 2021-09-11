@@ -9,13 +9,11 @@ const App: React.FC = () => {
   const t = 5;
   return (
     <div>
-      test as23d are tyou
+      test
       {t}
-      {`
-asdasd
-asdasdsdasd
-      `}
-      <div>te{t2.a}</div>
+      {process.env.TEST_ENV}
+      {process.env.NODE_ENV}
+      <div>test{t2.a}</div>
     </div>
   );
 };

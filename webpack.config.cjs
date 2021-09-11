@@ -1,22 +1,21 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { ESBuildMinifyPlugin } = require("esbuild-loader");
+// Local development config
 const path = require("path");
+const merge = require("webpack-merge");
+const ESLintPlugin = require("eslint-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const common = require("./webpack.config.common.cjs");
 
-module.exports = {
-  output: {
-    path: path.resolve(__dirname, "./dist"),
-    filename: "index.js",
-  },
-  resolve: {
-    extensions: [".ts", ".js", ".tsx"],
-    alias: {},
-  },
-  stats: "errors-only",
-  mode: "development",
+module.exports = merge.merge(common.config, {
+  plugins: [
+    new CleanWebpackPlugin(),
+    new ESLintPlugin({
+      threads: true,
+      lintDirtyModulesOnly: true,
+      extensions: ["ts", "tsx"],
+    }),
+  ],
+  stats: "minimal",
   devtool: "inline-source-map",
-  entry: {
-    main: path.resolve(__dirname, "./src/index.tsx"),
-  },
   devServer: {
     static: {
       directory: path.join(__dirname, "public"),
@@ -35,36 +34,4 @@ module.exports = {
     host: "0.0.0.0",
     hot: true,
   },
-  module: {
-    rules: [
-      {
-        test: /\.tsx?/,
-        use: [
-          {
-            loader: "esbuild-loader",
-            options: {
-              loader: "tsx",
-              target: "es2015",
-            },
-          },
-        ],
-      },
-    ],
-  },
-  experiments: {
-    topLevelAwait: true,
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "public/index.html",
-    }),
-  ],
-  optimization: {
-    minimizer: [
-      new ESBuildMinifyPlugin({
-        target: "es2015",
-        css: true,
-      }),
-    ],
-  },
-};
+});

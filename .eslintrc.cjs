@@ -54,7 +54,10 @@ module.exports = {
     "*.config.js",
     "*.config.cjs",
     "*.config.mjs",
+    "webpack.*",
     "esbuild.*",
     "setup.js",
+    "*.test.*",
+    "*.spec.*",
   ],
 };
