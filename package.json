@@ -1,5 +1,5 @@
 {
-  "name": "berry-webpack-integration",
+  "name": "berry-webpack",
   "packageManager": "yarn@3.0.2",
   "dependencies": {
     "react": "^17.0.2",
@@ -48,6 +48,7 @@
     "webpack-merge": "^5.8.0"
   },
   "scripts": {
+    "postinstall": "node postinstall.config.cjs",
     "clean": "rimraf dist/*",
     "dev": "webpack serve",
     "build": "cross-env NODE_ENV=production yarn build:ci && yarn lint",

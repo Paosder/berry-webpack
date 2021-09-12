@@ -10,3 +10,4 @@
 dist/
 .env*
 !.env.example
+.webpack_cache

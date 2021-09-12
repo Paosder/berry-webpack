@@ -22,6 +22,10 @@ module.exports = {
     output: {
       path: path.resolve(__dirname, "./dist"),
     },
+    cache: {
+      type: "filesystem",
+      cacheDirectory: path.resolve(__dirname, "./.webpack_cache"),
+    },
     resolve: {
       extensions: [".ts", ".js", ".tsx"],
       alias: {},
