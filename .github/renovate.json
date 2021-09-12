@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "group:all",
+    ":ignoreUnstable",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":updateNotScheduled",
+    ":automergeDisabled",
+    ":preserveSemverRanges",
+    "schedule:earlyMondays"
+  ],
+  "rangeStrategy": "bump",
+  "ignoreDeps": []
+}
