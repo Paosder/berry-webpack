@@ -12,6 +12,10 @@ module.exports = merge.merge(common.config, {
       extensions: ["ts", "tsx"],
     }),
   ],
+  cache: {
+    type: "filesystem",
+    cacheDirectory: path.resolve(__dirname, "./.webpack_cache"),
+  },
   stats: "minimal",
   devtool: "inline-source-map",
   devServer: {

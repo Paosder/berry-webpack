@@ -1,6 +1,7 @@
 // common config
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ESBuildMinifyPlugin } = require("esbuild-loader");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const chalk = require("chalk");
 const Dotenv = require("dotenv-webpack");
 const path = require("path");
@@ -21,10 +22,6 @@ module.exports = {
     mode,
     output: {
       path: path.resolve(__dirname, "./dist"),
-    },
-    cache: {
-      type: "filesystem",
-      cacheDirectory: path.resolve(__dirname, "./.webpack_cache"),
     },
     resolve: {
       extensions: [".ts", ".js", ".jsx", ".tsx"],
@@ -47,12 +44,17 @@ module.exports = {
             },
           ],
         },
+        {
+          test: /\.css$/i,
+          use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+        },
       ],
     },
     experiments: {
       topLevelAwait: true,
     },
     plugins: [
+      new MiniCssExtractPlugin(),
       new HtmlWebpackPlugin({
         template: "public/index.html",
       }),
