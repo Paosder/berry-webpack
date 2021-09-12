@@ -21,7 +21,6 @@ module.exports = {
     mode,
     output: {
       path: path.resolve(__dirname, "./dist"),
-      filename: "index.js",
     },
     resolve: {
       extensions: [".ts", ".js", ".tsx"],
@@ -44,6 +43,10 @@ module.exports = {
             },
           ],
         },
+        // {
+        //   test: /\.css$/i,
+        //   use: ["style-loader", "css-loader", "postcss-loader"],
+        // },
       ],
     },
     experiments: {
@@ -66,6 +69,22 @@ module.exports = {
           css: true,
         }),
       ],
+      splitChunks: {
+        cacheGroups: {
+          commons: {
+            test: /[\\/]node_modules[\\/]/,
+            name(module, chunks, cacheGroupKey) {
+              const moduleFileName = module
+                .identifier()
+                .split("/")
+                .reduceRight((item) => item);
+              const allChunksNames = chunks.map((item) => item.name).join("~");
+              return `${cacheGroupKey}-${allChunksNames}-${moduleFileName}`;
+            },
+            chunks: "all",
+          },
+        },
+      },
     },
   },
 };

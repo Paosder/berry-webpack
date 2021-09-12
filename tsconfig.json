@@ -15,10 +15,11 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
     "paths": {
       "@common/*": ["./src/test/common/*"],
       "@paosder/gl-variable": ["./src/variable.ts"]
     }
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "src/**/*.json"]
 }

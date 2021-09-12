@@ -1,19 +1,27 @@
 import React from "react";
+import styled from "styled-components";
+import test from "./test.json";
 
-const t2 = {
+const TestDiv = styled.div`
+  background-color: grey;
+`;
+
+const testObject = {
   a: 4,
   b: 3,
 };
 
 const App: React.FC = () => {
-  const t = 5;
+  const t = "Hello world!";
   return (
     <div>
-      test
       {t}
-      {process.env.TEST_ENV}
-      {process.env.NODE_ENV}
-      <div>test{t2.a}</div>
+      <section>{process.env.TEST_ENV}</section>
+      <section>{process.env.NODE_ENV}</section>
+      <section>{testObject.a}</section>
+      <TestDiv>
+        <div>{test.test}</div>
+      </TestDiv>
     </div>
   );
 };
