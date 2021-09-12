@@ -27,16 +27,16 @@ module.exports = {
       cacheDirectory: path.resolve(__dirname, "./.webpack_cache"),
     },
     resolve: {
-      extensions: [".ts", ".js", ".tsx"],
+      extensions: [".ts", ".js", ".jsx", ".tsx"],
       alias: {},
     },
     entry: {
-      main: path.resolve(__dirname, "./src/index.tsx"),
+      main: path.resolve(__dirname, "./src/index.jsx"),
     },
     module: {
       rules: [
         {
-          test: /\.tsx?/,
+          test: /\.[jt]{1}sx?/,
           use: [
             {
               loader: "esbuild-loader",
