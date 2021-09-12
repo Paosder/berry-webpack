@@ -2,12 +2,10 @@
 const path = require("path");
 const merge = require("webpack-merge");
 const ESLintPlugin = require("eslint-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const common = require("./webpack.config.common.cjs");
 
 module.exports = merge.merge(common.config, {
   plugins: [
-    new CleanWebpackPlugin(),
     new ESLintPlugin({
       threads: true,
       lintDirtyModulesOnly: true,
