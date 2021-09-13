@@ -15,11 +15,11 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
       - uses: actions/checkout@v2
-      - name: Set sample dotenv
+      - name: Set sample env files
         run: |
-          cp .dotenv.example .dotenv
-          cp .dotenv.example .dotenv.development
-          cp .dotenv.example .dotenv.production
+          cp .env.example .env
+          cp .env.example .env.development
+          cp .env.example .env.production
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
