@@ -16,9 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set sample dotenv
-        run: cp .dotenv.example .dotenv
-        run: cp .dotenv.example .dotenv.development
-        run: cp .dotenv.example .dotenv.production
+        run: |
+          cp .dotenv.example .dotenv
+          cp .dotenv.example .dotenv.development
+          cp .dotenv.example .dotenv.production
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
