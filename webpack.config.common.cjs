@@ -31,7 +31,7 @@ module.exports = {
       alias: {},
     },
     entry: {
-      main: path.resolve(__dirname, "./src/index.jsx"),
+      main: path.resolve(__dirname, "./src/index.tsx"),
     },
     module: {
       rules: [
