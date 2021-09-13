@@ -36,7 +36,7 @@ module.exports = {
     module: {
       rules: [
         {
-          test: /\.[jt]{1}sx?/,
+          test: /\.[jt]{1}sx?$/,
           use: [
             {
               loader: "esbuild-loader",
