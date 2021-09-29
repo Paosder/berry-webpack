@@ -1491,7 +1491,6 @@ __metadata:
     react-dom: ^17.0.2
     react-is: ^17.0.2
     rimraf: ^3.0.2
-    speed-measure-webpack-plugin: ^1.5.0
     styled-components: ^5.3.1
     tailwindcss: ^2.2.16
     typescript: ^4.4.3
@@ -1742,7 +1741,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.2":
+"chalk@npm:^4.0.0, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -6888,17 +6887,6 @@ resolve@^2.0.0-next.3:
     select-hose: ^2.0.0
     spdy-transport: ^3.0.0
   checksum: 2c739d0ff6f56ad36d2d754d0261d5ec358457bea7cbf77b1b05b0c6464f2ce65b85f196305f50b7bd9120723eb94bae9933466f28e67e5cd8cde4e27f1d75f8
-  languageName: node
-  linkType: hard
-
-"speed-measure-webpack-plugin@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "speed-measure-webpack-plugin@npm:1.5.0"
-  dependencies:
-    chalk: ^4.1.0
-  peerDependencies:
-    webpack: ^1 || ^2 || ^3 || ^4 || ^5
-  checksum: 5562da1e022a0c0f91dfaef362239ae110107ce1da6b9ba8ceaf16b998067ec89c96374afd049205cfa3526f8ec4551543a5c3dca3abd774b7923225a81bd24a
   languageName: node
   linkType: hard
 
