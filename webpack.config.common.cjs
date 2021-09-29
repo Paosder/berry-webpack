@@ -75,10 +75,14 @@ module.exports = {
           commons: {
             test: /[\\/]node_modules[\\/]/,
             name(module, chunks, cacheGroupKey) {
-              const moduleFileName = module
-                .identifier()
-                .split("/")
-                .reduceRight((item) => item);
+              const moduleFileName = (
+                process.platform !== "win32"
+                  ? module.identifier().split("/")
+                  : module.identifier().split("\\")
+              )
+                .reduceRight((item) => item)
+                .split("|")[0]
+                .replace(/.(js|css)/g, "");
               const allChunksNames = chunks.map((item) => item.name).join("~");
               return `${cacheGroupKey}-${allChunksNames}-${moduleFileName}`;
             },
