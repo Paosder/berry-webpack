@@ -10,6 +10,7 @@
   "schedule": [
     "every weekday"
   ],
+  "baseBranches": ["master", "tailwindcss"],
   "rangeStrategy": "bump",
   "ignoreDeps": []
 }
