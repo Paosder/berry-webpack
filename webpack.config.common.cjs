@@ -37,6 +37,7 @@ module.exports = {
       rules: [
         {
           test: /\.[jt]{1}sx?$/,
+          include: [path.resolve(__dirname, "./src")],
           use: [
             {
               loader: "esbuild-loader",
