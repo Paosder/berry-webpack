@@ -6,7 +6,7 @@
     ":updateNotScheduled",
     ":automergeDisabled",
     ":preserveSemverRanges",
-    "schedule:earlyMondays"
+    "schedule:every weekday"
   ],
   "rangeStrategy": "bump",
   "ignoreDeps": []
