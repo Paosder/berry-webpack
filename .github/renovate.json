@@ -5,8 +5,10 @@
     ":semanticPrefixFixDepsChoreOthers",
     ":updateNotScheduled",
     ":automergeDisabled",
-    ":preserveSemverRanges",
-    "schedule:every weekday"
+    ":preserveSemverRanges"
+  ],
+  "schedule": [
+    "every weekday"
   ],
   "rangeStrategy": "bump",
   "ignoreDeps": []
