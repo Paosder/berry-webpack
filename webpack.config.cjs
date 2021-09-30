@@ -4,7 +4,8 @@ const merge = require("webpack-merge");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const common = require("./webpack.config.common.cjs");
 
-module.exports = merge.merge(common.config, {
+/** @type { import('webpack').Configuration } */
+const config = {
   plugins: [
     new ESLintPlugin({
       threads: true,
@@ -32,4 +33,6 @@ module.exports = merge.merge(common.config, {
     host: "0.0.0.0",
     hot: true,
   },
-});
+};
+
+module.exports = merge.merge(common.config, config);
