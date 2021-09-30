@@ -18,6 +18,7 @@ console.log(
 
 module.exports = {
   env,
+  /** @type { import('webpack').Configuration } */
   config: {
     mode,
     output: {
