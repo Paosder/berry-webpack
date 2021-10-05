@@ -11,7 +11,7 @@
     "@commitlint/cli": "^13.2.0",
     "@commitlint/config-conventional": "^13.2.0",
     "@commitlint/travis-cli": "^13.2.0",
-    "@types/node": "^16.10.2",
+    "@types/node": "^16.10.3",
     "@types/react": "^17.0.27",
     "@types/react-dom": "^17.0.9",
     "@types/styled-components": "^5.1.14",
@@ -43,7 +43,7 @@
     "rimraf": "^3.0.2",
     "speed-measure-webpack-plugin": "^1.5.0",
     "typescript": "^4.4.3",
-    "webpack": "^5.56.1",
+    "webpack": "^5.57.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.3.1",
     "webpack-merge": "^5.8.0"
