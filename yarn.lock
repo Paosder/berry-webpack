@@ -604,10 +604,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^16.10.2":
-  version: 16.10.2
-  resolution: "@types/node@npm:16.10.2"
-  checksum: 83c1c3c68e7500103908c3f16094e458879c840a719c15b6ea577f81fe1f24a1b3473bb6c8e8091fe79a82543ca7639c6b1088fcf80292ec091d1d1c9504a87e
+"@types/node@npm:^16.10.3":
+  version: 16.10.3
+  resolution: "@types/node@npm:16.10.3"
+  checksum: 3fd429bce8a4acb497dcc62b536782a5e87ccf7cd91d64a78b263ae5d66cb72bf84be9eeeff6f84ae0567b065a40b267caa66d311f9e094990a5847bbd168a29
   languageName: node
   linkType: hard
 
@@ -1465,7 +1465,7 @@ __metadata:
     "@commitlint/cli": ^13.2.0
     "@commitlint/config-conventional": ^13.2.0
     "@commitlint/travis-cli": ^13.2.0
-    "@types/node": ^16.10.2
+    "@types/node": ^16.10.3
     "@types/react": ^17.0.27
     "@types/react-dom": ^17.0.9
     "@types/styled-components": ^5.1.14
@@ -1495,7 +1495,7 @@ __metadata:
     eslint-webpack-plugin: ^3.0.1
     html-webpack-plugin: ^5.3.2
     husky: ^7.0.2
-    mini-css-extract-plugin: ^2.3.0
+    mini-css-extract-plugin: ^2.4.1
     postcss: ^8.3.9
     postcss-loader: ^6.1.1
     prettier: ^2.4.1
@@ -1506,7 +1506,7 @@ __metadata:
     styled-components: ^5.3.1
     tailwindcss: ^2.2.16
     typescript: ^4.4.3
-    webpack: ^5.56.1
+    webpack: ^5.57.1
     webpack-cli: ^4.8.0
     webpack-dev-server: ^4.3.1
     webpack-merge: ^5.8.0
@@ -4962,14 +4962,14 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"mini-css-extract-plugin@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "mini-css-extract-plugin@npm:2.3.0"
+"mini-css-extract-plugin@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "mini-css-extract-plugin@npm:2.4.1"
   dependencies:
     schema-utils: ^3.1.0
   peerDependencies:
     webpack: ^5.0.0
-  checksum: 3c2f5ff29ba4d85999be36f4414b9b7200751411c6961b1ac7faa8ea5ae09b9e74bcb3b0425dbc94083d57d828449b393e56ccb709c2b5c766d968023726e25d
+  checksum: b12c81d5dbdbfeb927a72ce2c22c09f7fb7cd48e20b53fcf7981865728d45e3e7bab4acef97a73eaf9e01407de2f11bca3a59b6a80c266ab831df997c59a8d61
   languageName: node
   linkType: hard
 
@@ -7762,9 +7762,9 @@ typescript@^4.4.3:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.56.1":
-  version: 5.56.1
-  resolution: "webpack@npm:5.56.1"
+"webpack@npm:^5.57.1":
+  version: 5.57.1
+  resolution: "webpack@npm:5.57.1"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -7795,7 +7795,7 @@ typescript@^4.4.3:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: e5ead673155a5e9667c8ae5413af18739335b067e03ae4e6daefbf9bf648321267abc706d3c756b17c9224c5e31762c0de212e700cca34ab4ee1e069e7806b8a
+  checksum: 3122608d6ff8925c68b6736cbed41b494c5d8da055e21390910398fe26902588b75c2620d441a53bf1791bf8d240cd3f11df3ab19038ed3265b8b4e381a02a71
   languageName: node
   linkType: hard
 
