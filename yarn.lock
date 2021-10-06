@@ -604,10 +604,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^16.10.2":
-  version: 16.10.2
-  resolution: "@types/node@npm:16.10.2"
-  checksum: 83c1c3c68e7500103908c3f16094e458879c840a719c15b6ea577f81fe1f24a1b3473bb6c8e8091fe79a82543ca7639c6b1088fcf80292ec091d1d1c9504a87e
+"@types/node@npm:^16.10.3":
+  version: 16.10.3
+  resolution: "@types/node@npm:16.10.3"
+  checksum: 3fd429bce8a4acb497dcc62b536782a5e87ccf7cd91d64a78b263ae5d66cb72bf84be9eeeff6f84ae0567b065a40b267caa66d311f9e094990a5847bbd168a29
   languageName: node
   linkType: hard
 
@@ -1422,7 +1422,7 @@ __metadata:
     "@commitlint/cli": ^13.2.0
     "@commitlint/config-conventional": ^13.2.0
     "@commitlint/travis-cli": ^13.2.0
-    "@types/node": ^16.10.2
+    "@types/node": ^16.10.3
     "@types/react": ^17.0.27
     "@types/react-dom": ^17.0.9
     "@types/styled-components": ^5.1.14
@@ -1458,7 +1458,7 @@ __metadata:
     speed-measure-webpack-plugin: ^1.5.0
     styled-components: ^5.3.1
     typescript: ^4.4.3
-    webpack: ^5.56.1
+    webpack: ^5.57.1
     webpack-cli: ^4.8.0
     webpack-dev-server: ^4.3.1
     webpack-merge: ^5.8.0
@@ -7118,9 +7118,9 @@ typescript@^4.4.3:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.56.1":
-  version: 5.56.1
-  resolution: "webpack@npm:5.56.1"
+"webpack@npm:^5.57.1":
+  version: 5.57.1
+  resolution: "webpack@npm:5.57.1"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -7151,7 +7151,7 @@ typescript@^4.4.3:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: e5ead673155a5e9667c8ae5413af18739335b067e03ae4e6daefbf9bf648321267abc706d3c756b17c9224c5e31762c0de212e700cca34ab4ee1e069e7806b8a
+  checksum: 3122608d6ff8925c68b6736cbed41b494c5d8da055e21390910398fe26902588b75c2620d441a53bf1791bf8d240cd3f11df3ab19038ed3265b8b4e381a02a71
   languageName: node
   linkType: hard
 
