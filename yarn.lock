@@ -1486,7 +1486,7 @@ __metadata:
     eslint-config-prettier: ^8.3.0
     eslint-config-react-app: ^6.0.0
     eslint-import-resolver-node: ^0.3.6
-    eslint-plugin-flowtype: ^8.0.1
+    eslint-plugin-flowtype: ^8.0.2
     eslint-plugin-import: ^2.25.2
     eslint-plugin-jsx-a11y: ^6.4.1
     eslint-plugin-prettier: ^4.0.0
@@ -3114,7 +3114,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-flowtype@npm:^8.0.1":
+"eslint-plugin-flowtype@npm:^8.0.2":
   version: 8.0.2
   resolution: "eslint-plugin-flowtype@npm:8.0.2"
   dependencies:
