@@ -1,6 +1,6 @@
 {
   "name": "berry-webpack",
-  "packageManager": "yarn@3.0.2",
+  "packageManager": "yarn@3.1.0",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -12,8 +12,8 @@
     "@commitlint/config-conventional": "^14.1.0",
     "@commitlint/travis-cli": "^14.1.0",
     "@types/node": "^16.11.6",
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.15",
     "@types/webpack": "^5.28.0",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
