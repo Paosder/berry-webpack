@@ -100,8 +100,6 @@ module.exports = {
         }),
       ],
       splitChunks: {
-        chunks: "all",
-        enforceSizeThreshold: 5000,
         cacheGroups: {
           commons: {
             test: /[\\/]node_modules[\\/]/,
@@ -115,9 +113,17 @@ module.exports = {
                 .split("|")[0]
                 .replace(/.(js|css)/g, "");
               const allChunksNames = chunks.map((item) => item.name).join("~");
-              return `${cacheGroupKey}-${allChunksNames}-${moduleFileName}`;
+              return `${cacheGroupKey}-${moduleFileName}`;
             },
             chunks: "all",
+            reuseExistingChunk: true,
+          },
+          default: {
+            chunks: "all",
+            maxSize: 40960,
+            minChunks: 1,
+            reuseExistingChunk: true,
+            name: "main",
           },
         },
       },
