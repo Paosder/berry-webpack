@@ -41,6 +41,12 @@ _나는 아무 생각이 없다. 왜냐하면 아무 생각이 없기 때문이�
 
 R.I.P
 
+## Branch Information
+
+- `swc`: use swc. React fast-refresh supported. Default.
+- `esbuild`: use esbuild. Does not support React fast-refresh.
+- `esbuild-tailwindcss`: esbuild with tailwindcss(css-loader) support.
+
 # License
 
 WTFPL
