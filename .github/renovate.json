@@ -8,6 +8,10 @@
     ":preserveSemverRanges",
     "schedule:earlyMondays"
   ],
+  "schedule": [
+    "every weekday"
+  ],
+  "baseBranches": ["swc", "esbuild", "esbuild-tailwindcss"],
   "rangeStrategy": "bump",
   "ignoreDeps": []
 }
