@@ -72,6 +72,8 @@ module.exports = {
         }),
       ],
       splitChunks: {
+        chunks: "all",
+        enforceSizeThreshold: 5000,
         cacheGroups: {
           commons: {
             test: /[\\/]node_modules[\\/]/,

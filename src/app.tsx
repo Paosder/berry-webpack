@@ -1,9 +1,11 @@
-import React from "react";
+import React, { Suspense } from "react";
 import styled from "styled-components";
 import test from "./test.json";
 
+const OtherComponent = React.lazy(() => import("./test"));
+
 const TestDiv = styled.div`
-  background-color: grey;
+  background-color: yellow;
 `;
 
 const testObject = {
@@ -19,6 +21,9 @@ const App: React.FC = () => {
       <section>{process.env.TEST_ENV}</section>
       <section>{process.env.NODE_ENV}</section>
       <section>{testObject.a}</section>
+      <Suspense fallback={<div>Loading...</div>}>
+        <OtherComponent />
+      </Suspense>
       <TestDiv>
         <div>{test.test}</div>
       </TestDiv>
