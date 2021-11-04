@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React, { Suspense } from "react";
 import styled from "styled-components";
 import test from "./test.json";
@@ -27,6 +28,7 @@ const App: React.FC = () => {
       <TestDiv>
         <div>{test.test}d3d243</div>
       </TestDiv>
+      <Button variant="contained">Hello world!</Button>
     </div>
   );
 };

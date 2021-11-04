@@ -2,6 +2,11 @@
   "name": "berry-webpack",
   "packageManager": "yarn@3.1.0",
   "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/material": "^5.0.6",
+    "@mui/styled-engine": "^5.0.2",
+    "@mui/system": "^5.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
