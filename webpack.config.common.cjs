@@ -1,6 +1,6 @@
 // common config
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { ESBuildMinifyPlugin } = require("esbuild-loader");
+const TerserPlugin = require("terser-webpack-plugin");
 const chalk = require("chalk");
 const Dotenv = require("dotenv-webpack");
 const path = require("path");
@@ -41,10 +41,33 @@ module.exports = {
           include: [path.resolve(__dirname, "./src")],
           use: [
             {
-              loader: "esbuild-loader",
+              loader: "swc-loader",
               options: {
-                loader: "tsx",
-                target: "es2015",
+                jsc: {
+                  parser: {
+                    syntax: "typescript",
+                    tsx: true,
+                  },
+                  transform: {
+                    react: {
+                      runtime: "automatic",
+                      development: mode === "development",
+                      refresh: mode === "development" ? true : false,
+                    },
+                  },
+                  target: "es2015",
+                  loose: false,
+                  externalHelpers: false,
+                  keepClassNames: false,
+                },
+                sourceMaps: true,
+                env: {
+                  coreJs: 3,
+                },
+                module: {
+                  type: "es6",
+                  noInterop: true,
+                },
               },
             },
           ],
@@ -66,9 +89,14 @@ module.exports = {
     ],
     optimization: {
       minimizer: [
-        new ESBuildMinifyPlugin({
-          target: "es2015",
-          css: true,
+        new TerserPlugin({
+          minify: TerserPlugin.swcMinify,
+          terserOptions: {
+            compress: {
+              dead_code: true,
+              ecma: "2015",
+            },
+          },
         }),
       ],
       splitChunks: {

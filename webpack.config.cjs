@@ -2,6 +2,7 @@
 const path = require("path");
 const merge = require("webpack-merge");
 const ESLintPlugin = require("eslint-webpack-plugin");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const common = require("./webpack.config.common.cjs");
 
 /** @type { import('webpack').Configuration } */
@@ -12,6 +13,7 @@ const config = {
       lintDirtyModulesOnly: true,
       extensions: ["ts", "tsx"],
     }),
+    new ReactRefreshWebpackPlugin(),
   ],
   stats: "minimal",
   devtool: "inline-source-map",

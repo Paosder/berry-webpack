@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import TestComponent from "./test";
 import test from "./test.json";
 
 const TestDiv = styled.div`
-  background-color: grey;
+  background-color: blue;
 `;
 
 const testObject = {
@@ -19,8 +20,9 @@ const App: React.FC = () => {
       <section>{process.env.TEST_ENV}</section>
       <section>{process.env.NODE_ENV}</section>
       <section>{testObject.a}</section>
+      <TestComponent />
       <TestDiv>
-        <div>{test.test}</div>
+        <div>{test.test}d3d243</div>
       </TestDiv>
     </div>
   );
