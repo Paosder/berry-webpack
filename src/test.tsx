@@ -1,7 +1,12 @@
 import React from "react";
+import styled from "styled-components";
+
+const Div = styled.div`
+  background-color: greenyellow;
+`;
 
 const TestComponent: React.FC = () => {
-  return <div>hello test32</div>;
+  return <Div>Spliited Component!</Div>;
 };
 
 export default TestComponent;
