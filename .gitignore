@@ -13,3 +13,4 @@ dist/
 .webpack_cache
 
 node_modules
+report
