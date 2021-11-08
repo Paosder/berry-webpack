@@ -10,7 +10,7 @@
   "schedule": [
     "every weekday"
   ],
-  "baseBranches": ["swc", "esbuild", "esbuild-tailwindcss"],
+  "baseBranches": ["swc", "swc-mui", "esbuild", "esbuild-tailwindcss"],
   "rangeStrategy": "bump",
   "ignoreDeps": []
 }
