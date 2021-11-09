@@ -4,6 +4,7 @@ const merge = require("webpack-merge");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const common = require("./webpack.config.common.cjs");
+const DllReferencePlugin = require("webpack").DllReferencePlugin;
 
 /** @type { import('webpack').Configuration } */
 const config = {
@@ -14,6 +15,10 @@ const config = {
       extensions: ["ts", "tsx"],
     }),
     new ReactRefreshWebpackPlugin(),
+    new DllReferencePlugin({
+      context: __dirname,
+      manifest: path.resolve(__dirname, "public/dll/manifest.json"),
+    }),
   ],
   stats: "minimal",
   devtool: "inline-source-map",

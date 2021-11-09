@@ -6,7 +6,7 @@ const Div = styled.div`
 `;
 
 const TestComponent: React.FC = () => {
-  return <Div>Spliited Component!</Div>;
+  return <Div>Splitted Component!</Div>;
 };
 
 export default TestComponent;

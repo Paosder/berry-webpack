@@ -1,8 +1,10 @@
 // common config
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackTagsPlugin = require("html-webpack-tags-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const chalk = require("chalk");
 const Dotenv = require("dotenv-webpack");
+const ProgressPlugin = require("webpack").ProgressPlugin;
 const path = require("path");
 
 const env = process.env.NODE_ENV ? `.env.${process.env.NODE_ENV}` : ".env";
@@ -80,13 +82,17 @@ module.exports = {
     plugins: [
       new HtmlWebpackPlugin({
         template: "public/index.html",
+        lang: "en-US",
       }),
+      mode === "development" &&
+        new HtmlWebpackTagsPlugin({ tags: ["dll/index.js"], append: false }),
+      mode === "development" && new ProgressPlugin({}),
       new Dotenv({
         systemvars: true,
         safe: true,
         path: env,
       }),
-    ],
+    ].filter((p) => p),
     optimization: {
       minimizer: [
         new TerserPlugin({
@@ -99,9 +105,11 @@ module.exports = {
           },
         }),
       ],
+      moduleIds: "deterministic",
+      runtimeChunk: "single",
       splitChunks: {
         cacheGroups: {
-          commons: {
+          vendors: {
             test: /[\\/]node_modules[\\/]/,
             name(module, chunks, cacheGroupKey) {
               const moduleFileName = (
@@ -117,6 +125,9 @@ module.exports = {
             },
             chunks: "all",
             reuseExistingChunk: true,
+            priority: 10,
+            idHint: "vendors",
+            enforce: true,
           },
           default: {
             chunks: "all",

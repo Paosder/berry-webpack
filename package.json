@@ -5,7 +5,8 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "styled-normalize": "^8.0.7"
   },
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
@@ -41,6 +42,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-webpack-plugin": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
+    "html-webpack-tags-plugin": "^3.0.2",
     "husky": "^7.0.4",
     "prettier": "^2.4.1",
     "react-refresh": "^0.10.0",
@@ -53,11 +55,13 @@
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.4.0",
-    "webpack-merge": "^5.8.0"
+    "webpack-merge": "^5.8.0",
+    "yargs": "^17.2.1"
   },
   "scripts": {
-    "postinstall": "node postinstall.config.cjs",
-    "clean": "rimraf dist/*",
+    "bootstrap": "node postinstall.config.cjs --generateDLL",
+    "bootstrap:dll": "webpack --config webpack.config.vendor.js",
+    "clean": "rimraf dist/* && rimraf public/dll/*",
     "dev": "webpack serve",
     "build": "cross-env NODE_ENV=production yarn build:ci && yarn lint",
     "build:ci": "webpack --config webpack.config.production.cjs",
