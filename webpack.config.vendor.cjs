@@ -10,7 +10,7 @@ module.exports = {
     vendor: ["react", "react-dom", "styled-components"],
   },
   output: {
-    path: path.resolve(__dirname, "public/dll"),
+    path: path.resolve(__dirname, "dll"),
     filename: "index.js",
     library: "vendor_lib",
   },
@@ -18,7 +18,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new webpack.DllPlugin({
       name: "vendor_lib",
-      path: path.resolve(__dirname, "public/dll/manifest.json"),
+      path: path.resolve(__dirname, "dll/manifest.json"),
       format: true,
     }),
   ],

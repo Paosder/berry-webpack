@@ -17,16 +17,22 @@ const config = {
     new ReactRefreshWebpackPlugin(),
     new DllReferencePlugin({
       context: __dirname,
-      manifest: path.resolve(__dirname, "public/dll/manifest.json"),
+      manifest: path.resolve(__dirname, "dll/manifest.json"),
     }),
   ],
   stats: "minimal",
   devtool: "inline-source-map",
   devServer: {
-    static: {
-      directory: path.join(__dirname, "public"),
-      watch: true,
-    },
+    static: [
+      {
+        directory: path.join(__dirname, "public"),
+        watch: true,
+      },
+      {
+        directory: path.join(__dirname, "dll"),
+        publicPath: "/dll",
+      },
+    ],
     client: {
       logging: "warn",
       overlay: {

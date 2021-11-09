@@ -81,7 +81,7 @@ module.exports = {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "public/index.html",
+        template: "template/index.html",
         lang: "en-US",
       }),
       mode === "development" &&

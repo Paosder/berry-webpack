@@ -14,4 +14,4 @@ dist/
 
 node_modules
 report
-public/dll
+dll

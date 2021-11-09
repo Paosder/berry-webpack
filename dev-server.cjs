@@ -16,7 +16,7 @@ const vendors = vendorConfig.entry.vendor;
 // CONSTANTS
 // ---------------------------------------------------------------
 const UNKNOWN_VENDOR_ERROR = "ENODEPS";
-const DLL_PATH = "./public/dll";
+const DLL_PATH = "./dll";
 const DLL_JSON = "version.json";
 const DLL_JSON_PATH = path.join(__dirname, DLL_PATH, DLL_JSON);
 // ---------------------------------------------------------------
