@@ -47,6 +47,10 @@ module.exports = {
     "@typescript-eslint/no-shadow": ["error"],
     "@typescript-eslint/no-inferrable-types": "off",
     "react/jsx-filename-extension": [1, { extensions: [".tsx", ".jsx"] }],
+    "react/function-component-definition": [
+      2,
+      { namedComponents: "arrow-function" },
+    ],
   },
   ignorePatterns: [
     "node_modules",
