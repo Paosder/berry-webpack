@@ -61,10 +61,10 @@
   },
   "scripts": {
     "postinstall": "node postinstall.cjs",
-    "clean": "rimraf dist/* && rimraf public/dll/* && rimraf .webpack_cache/*",
+    "clean": "rimraf dist && rimraf dll && rimraf .webpack_cache",
     "dev": "node dev-server.cjs",
     "build": "yarn build:ci && yarn lint",
-    "build:ci": "cross-env NODE_ENV=production webpack --config webpack.config.production.cjs",
+    "build:ci": "yarn clean && cross-env NODE_ENV=production webpack --config webpack.config.production.cjs",
     "lint": "eslint src/**/*.{ts,tsx}"
   },
   "browserslist": {

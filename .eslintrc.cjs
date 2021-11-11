@@ -63,5 +63,6 @@ module.exports = {
     "setup.js",
     "*.test.*",
     "*.spec.*",
+    "*.cjs",
   ],
 };

@@ -5,10 +5,15 @@ const ESLintPlugin = require("eslint-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const common = require("./webpack.config.common.cjs");
 const DllReferencePlugin = require("webpack").DllReferencePlugin;
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 /** @type { import('webpack').Configuration } */
 const config = {
   plugins: [
+    new HtmlWebpackPlugin({
+      template: "template/index.html",
+      lang: "en-US",
+    }),
     new ESLintPlugin({
       threads: true,
       lintDirtyModulesOnly: true,

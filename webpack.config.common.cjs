@@ -1,5 +1,4 @@
 // common config
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackTagsPlugin = require("html-webpack-tags-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const chalk = require("chalk");
@@ -23,7 +22,7 @@ module.exports = {
   config: {
     mode,
     output: {
-      path: path.resolve(__dirname, "./dist"),
+      path: path.resolve(__dirname, "./dist/js"),
     },
     cache: {
       type: "filesystem",
@@ -80,10 +79,6 @@ module.exports = {
       topLevelAwait: true,
     },
     plugins: [
-      new HtmlWebpackPlugin({
-        template: "template/index.html",
-        lang: "en-US",
-      }),
       mode === "development" &&
         new HtmlWebpackTagsPlugin({ tags: ["dll/index.js"], append: false }),
       mode === "development" && new ProgressPlugin({}),
