@@ -562,107 +562,107 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core-android-arm64@npm:^1.2.107":
-  version: 1.2.107
-  resolution: "@swc/core-android-arm64@npm:1.2.107"
+"@swc/core-android-arm64@npm:^1.2.108":
+  version: 1.2.108
+  resolution: "@swc/core-android-arm64@npm:1.2.108"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-arm64@npm:^1.2.107":
-  version: 1.2.107
-  resolution: "@swc/core-darwin-arm64@npm:1.2.107"
+"@swc/core-darwin-arm64@npm:^1.2.108":
+  version: 1.2.108
+  resolution: "@swc/core-darwin-arm64@npm:1.2.108"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-x64@npm:^1.2.107":
-  version: 1.2.107
-  resolution: "@swc/core-darwin-x64@npm:1.2.107"
+"@swc/core-darwin-x64@npm:^1.2.108":
+  version: 1.2.108
+  resolution: "@swc/core-darwin-x64@npm:1.2.108"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-freebsd-x64@npm:^1.2.107":
-  version: 1.2.107
-  resolution: "@swc/core-freebsd-x64@npm:1.2.107"
+"@swc/core-freebsd-x64@npm:^1.2.108":
+  version: 1.2.108
+  resolution: "@swc/core-freebsd-x64@npm:1.2.108"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm-gnueabihf@npm:^1.2.107":
-  version: 1.2.107
-  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.2.107"
+"@swc/core-linux-arm-gnueabihf@npm:^1.2.108":
+  version: 1.2.108
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.2.108"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-gnu@npm:^1.2.107":
-  version: 1.2.107
-  resolution: "@swc/core-linux-arm64-gnu@npm:1.2.107"
+"@swc/core-linux-arm64-gnu@npm:^1.2.108":
+  version: 1.2.108
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.2.108"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-musl@npm:^1.2.107":
-  version: 1.2.107
-  resolution: "@swc/core-linux-arm64-musl@npm:1.2.107"
+"@swc/core-linux-arm64-musl@npm:^1.2.108":
+  version: 1.2.108
+  resolution: "@swc/core-linux-arm64-musl@npm:1.2.108"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-gnu@npm:^1.2.107":
-  version: 1.2.107
-  resolution: "@swc/core-linux-x64-gnu@npm:1.2.107"
+"@swc/core-linux-x64-gnu@npm:^1.2.108":
+  version: 1.2.108
+  resolution: "@swc/core-linux-x64-gnu@npm:1.2.108"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-musl@npm:^1.2.107":
-  version: 1.2.107
-  resolution: "@swc/core-linux-x64-musl@npm:1.2.107"
+"@swc/core-linux-x64-musl@npm:^1.2.108":
+  version: 1.2.108
+  resolution: "@swc/core-linux-x64-musl@npm:1.2.108"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-win32-arm64-msvc@npm:^1.2.107":
-  version: 1.2.107
-  resolution: "@swc/core-win32-arm64-msvc@npm:1.2.107"
+"@swc/core-win32-arm64-msvc@npm:^1.2.108":
+  version: 1.2.108
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.2.108"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-win32-ia32-msvc@npm:^1.2.107":
-  version: 1.2.107
-  resolution: "@swc/core-win32-ia32-msvc@npm:1.2.107"
+"@swc/core-win32-ia32-msvc@npm:^1.2.108":
+  version: 1.2.108
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.2.108"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@swc/core-win32-x64-msvc@npm:^1.2.107":
-  version: 1.2.107
-  resolution: "@swc/core-win32-x64-msvc@npm:1.2.107"
+"@swc/core-win32-x64-msvc@npm:^1.2.108":
+  version: 1.2.108
+  resolution: "@swc/core-win32-x64-msvc@npm:1.2.108"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core@npm:^1.2.107":
-  version: 1.2.107
-  resolution: "@swc/core@npm:1.2.107"
+"@swc/core@npm:^1.2.108":
+  version: 1.2.108
+  resolution: "@swc/core@npm:1.2.108"
   dependencies:
     "@node-rs/helper": ^1.0.0
-    "@swc/core-android-arm64": ^1.2.107
-    "@swc/core-darwin-arm64": ^1.2.107
-    "@swc/core-darwin-x64": ^1.2.107
-    "@swc/core-freebsd-x64": ^1.2.107
-    "@swc/core-linux-arm-gnueabihf": ^1.2.107
-    "@swc/core-linux-arm64-gnu": ^1.2.107
-    "@swc/core-linux-arm64-musl": ^1.2.107
-    "@swc/core-linux-x64-gnu": ^1.2.107
-    "@swc/core-linux-x64-musl": ^1.2.107
-    "@swc/core-win32-arm64-msvc": ^1.2.107
-    "@swc/core-win32-ia32-msvc": ^1.2.107
-    "@swc/core-win32-x64-msvc": ^1.2.107
+    "@swc/core-android-arm64": ^1.2.108
+    "@swc/core-darwin-arm64": ^1.2.108
+    "@swc/core-darwin-x64": ^1.2.108
+    "@swc/core-freebsd-x64": ^1.2.108
+    "@swc/core-linux-arm-gnueabihf": ^1.2.108
+    "@swc/core-linux-arm64-gnu": ^1.2.108
+    "@swc/core-linux-arm64-musl": ^1.2.108
+    "@swc/core-linux-x64-gnu": ^1.2.108
+    "@swc/core-linux-x64-musl": ^1.2.108
+    "@swc/core-win32-arm64-msvc": ^1.2.108
+    "@swc/core-win32-ia32-msvc": ^1.2.108
+    "@swc/core-win32-x64-msvc": ^1.2.108
   dependenciesMeta:
     "@swc/core-android-arm64":
       optional: true
@@ -688,7 +688,7 @@ __metadata:
       optional: true
     "@swc/core-win32-x64-msvc":
       optional: true
-  checksum: 452fd087c7c16caa1bb51c48847b43e5ec57f44dad24b1d5ca64849d050343caeb0942db126296f799778eaf455274a5a25e4b0a9334bf49657ed758babaa846
+  checksum: ff9b371b56e3e9bc9b3c7ed9e4c9b1e7086fcd03f3ad5b1328c0ad403e182d600e174e7dab4c11cf53f322691226468b06d19fcd0f6976ec3a2965f3c434c6e2
   languageName: node
   linkType: hard
 
@@ -1622,7 +1622,7 @@ __metadata:
     "@commitlint/config-conventional": ^14.1.0
     "@commitlint/travis-cli": ^14.1.0
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.1
-    "@swc/core": ^1.2.107
+    "@swc/core": ^1.2.108
     "@types/node": ^16.11.7
     "@types/react": ^17.0.34
     "@types/react-dom": ^17.0.11
@@ -1631,10 +1631,10 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.3.1
     "@typescript-eslint/parser": ^5.3.1
     babel-eslint: ^10.1.0
-    browserslist: ^4.17.6
+    browserslist: ^4.18.0
     chalk: ^4.1.2
     clean-webpack-plugin: ^4.0.0
-    copy-webpack-plugin: ^9.0.1
+    copy-webpack-plugin: ^9.1.0
     cross-env: ^7.0.3
     dotenv: ^10.0.0
     dotenv-webpack: ^7.0.3
@@ -1650,7 +1650,7 @@ __metadata:
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-react: ^7.27.0
     eslint-plugin-react-hooks: ^4.3.0
-    eslint-webpack-plugin: ^3.1.0
+    eslint-webpack-plugin: ^3.1.1
     html-webpack-plugin: ^5.5.0
     html-webpack-tags-plugin: ^3.0.2
     husky: ^7.0.4
@@ -1667,10 +1667,10 @@ __metadata:
     swc-loader: ^0.1.15
     terser-webpack-plugin: ^5.2.5
     typescript: ^4.4.4
-    webpack: ^5.63.0
+    webpack: ^5.64.0
     webpack-bundle-analyzer: ^4.5.0
     webpack-cli: ^4.9.1
-    webpack-dev-server: ^4.4.0
+    webpack-dev-server: ^4.5.0
     webpack-merge: ^5.8.0
   languageName: unknown
   linkType: soft
@@ -1762,18 +1762,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:^4.17.6":
-  version: 4.17.6
-  resolution: "browserslist@npm:4.17.6"
+"browserslist@npm:^4.18.0":
+  version: 4.18.0
+  resolution: "browserslist@npm:4.18.0"
   dependencies:
-    caniuse-lite: ^1.0.30001274
-    electron-to-chromium: ^1.3.886
+    caniuse-lite: ^1.0.30001280
+    electron-to-chromium: ^1.3.896
     escalade: ^3.1.1
     node-releases: ^2.0.1
     picocolors: ^1.0.0
   bin:
     browserslist: cli.js
-  checksum: 7191280a30621dcb9b285f7f22c462aacbd366a94fcacdac109b8fa1a2fdab826b6545ccb308ad40f5d80f4fc488ae1212af8b16342286b97a1418476a98f77c
+  checksum: 8bf8867d05d8709ba936bbe6d7c5055fb07e4c3227866e64b795044e7c44be1ff0c65cb9e95e8f53d3119ed92bd783ebbb4a54a9d69b5cbb9f8b17ec2864067a
   languageName: node
   linkType: hard
 
@@ -1890,10 +1890,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001274":
-  version: 1.0.30001275
-  resolution: "caniuse-lite@npm:1.0.30001275"
-  checksum: 35baadc902acdeaafcce4ac76d1ccb6df1904c688e87ef4ca7afb6d960cd68f86a1e0252547443247863a598546bf6cd7fdd6e2611322c83d669cfd8b5a5179e
+"caniuse-lite@npm:^1.0.30001280":
+  version: 1.0.30001280
+  resolution: "caniuse-lite@npm:1.0.30001280"
+  checksum: 5794b22f4254927f095e83c65e89ddfc63065c7ed16e6544555a3252ee3d16e48f8a7846713dc64869c52e1abe9a2a93161804b40c2097d1abc9aaa0155a0b65
   languageName: node
   linkType: hard
 
@@ -2217,20 +2217,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"copy-webpack-plugin@npm:^9.0.1":
-  version: 9.0.1
-  resolution: "copy-webpack-plugin@npm:9.0.1"
+"copy-webpack-plugin@npm:^9.1.0":
+  version: 9.1.0
+  resolution: "copy-webpack-plugin@npm:9.1.0"
   dependencies:
-    fast-glob: ^3.2.5
-    glob-parent: ^6.0.0
+    fast-glob: ^3.2.7
+    glob-parent: ^6.0.1
     globby: ^11.0.3
     normalize-path: ^3.0.0
-    p-limit: ^3.1.0
-    schema-utils: ^3.0.0
+    schema-utils: ^3.1.1
     serialize-javascript: ^6.0.0
   peerDependencies:
     webpack: ^5.1.0
-  checksum: f3e69883e173f9a298b63dcf35ba5aafc02e252c67c236029424af19fb2e36fc93de94054bd7a9ada8b4cbcc4e96e9a3a269f972e4a45f4fd1b32a3d199d2cae
+  checksum: 06cb4fb6fc99a95ccfd3169115ee57f64953e5b4075900fc8faab98b7e7d3fcd6915b125fdb98c919cfd55e581a8444f5c6b9dbb342cbd60b154d8fb3f79f2b9
   languageName: node
   linkType: hard
 
@@ -2690,10 +2689,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.3.886":
-  version: 1.3.888
-  resolution: "electron-to-chromium@npm:1.3.888"
-  checksum: 0af9e4056a9778639e4a2ef3cb0fb23f301115f05f87e48241701f5b6637a8fe48d1a7894c47aceb2ff15dad7bfe6a6622066039fc17a990b44772b8f49515cd
+"electron-to-chromium@npm:^1.3.896":
+  version: 1.3.896
+  resolution: "electron-to-chromium@npm:1.3.896"
+  checksum: 6a6120bc6d2c53c57409831e0acd4c9d2c3c18e30851b3c9278bce9a4ad24ce7781fbc0fe735926aea358875ab5b10f32208df865a1c42ca565108f55b6e4aae
   languageName: node
   linkType: hard
 
@@ -3348,9 +3347,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-webpack-plugin@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "eslint-webpack-plugin@npm:3.1.0"
+"eslint-webpack-plugin@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "eslint-webpack-plugin@npm:3.1.1"
   dependencies:
     "@types/eslint": ^7.28.2
     jest-worker: ^27.3.1
@@ -3360,7 +3359,7 @@ __metadata:
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0
     webpack: ^5.0.0
-  checksum: c6858e5f28d0ca5c5982a7a00cad99a25a8e117f90a662c5f550722f31ef8057ef1cf0cf1b89da249032437a61d917ab7623cb1ff4677cb4886aa2b010ecfdb0
+  checksum: 4ff3f3fc8f03a187792f783513c3f4274221623d5f5c16ca90542c1b781fd04ed646ab6043caa55a51a654d5ab2c7039677faedee8bfb526d1310edc3909cbd2
   languageName: node
   linkType: hard
 
@@ -3559,7 +3558,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.1.1, fast-glob@npm:^3.2.5":
+"fast-glob@npm:^3.1.1, fast-glob@npm:^3.2.7":
   version: 3.2.7
   resolution: "fast-glob@npm:3.2.7"
   dependencies:
@@ -3856,7 +3855,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"glob-parent@npm:^6.0.0, glob-parent@npm:^6.0.1":
+"glob-parent@npm:^6.0.1":
   version: 6.0.2
   resolution: "glob-parent@npm:6.0.2"
   dependencies:
@@ -7626,9 +7625,9 @@ typescript@^4.4.4:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "webpack-dev-server@npm:4.4.0"
+"webpack-dev-server@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "webpack-dev-server@npm:4.5.0"
   dependencies:
     ansi-html-community: ^0.0.8
     bonjour: ^3.5.0
@@ -7662,7 +7661,7 @@ typescript@^4.4.4:
       optional: true
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
-  checksum: c317b5029b6f8caad47a257edb68b2dad5cd7087f4481ebda3359701c981037ce387486bdf992fb6e23213685d8e25e306b25a62541a42d0154562b1999563a5
+  checksum: 9167420dd0d3e836058154d58ec78c7c53f26652f51785d91a01e4fde24290dab86533a39e069b4087dc8460b1cb0ba8128239ebf21de4f100f08ee238ac58a3
   languageName: node
   linkType: hard
 
@@ -7730,9 +7729,9 @@ typescript@^4.4.4:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.63.0":
-  version: 5.63.0
-  resolution: "webpack@npm:5.63.0"
+"webpack@npm:^5.64.0":
+  version: 5.64.0
+  resolution: "webpack@npm:5.64.0"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -7763,7 +7762,7 @@ typescript@^4.4.4:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 8127be3d900d8e57f106f61dc66f8334162d5425d770f46b2110c89057c1607e9be1a20fa37ee53bd6915e3041dc074c5e2aa99665abb18112463b91606946f7
+  checksum: 9d32a61d988b0cd34f7c2b9006ac2eec81c36a72acf3b7f01c6c567c2ebc95bb75d422a53a5bea69c36dbfc50c11ac953ec07742da43c55beb512d0f2d4bb400
   languageName: node
   linkType: hard
 
