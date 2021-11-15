@@ -1515,7 +1515,7 @@ __metadata:
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-react: ^7.27.0
     eslint-plugin-react-hooks: ^4.3.0
-    eslint-webpack-plugin: ^3.1.0
+    eslint-webpack-plugin: ^3.1.1
     html-webpack-plugin: ^5.5.0
     husky: ^7.0.4
     mini-css-extract-plugin: ^2.4.4
@@ -1529,10 +1529,10 @@ __metadata:
     styled-components: ^5.3.3
     tailwindcss: ^2.2.19
     typescript: ^4.4.4
-    webpack: ^5.63.0
+    webpack: ^5.64.0
     webpack-bundle-analyzer: ^4.5.0
     webpack-cli: ^4.9.1
-    webpack-dev-server: ^4.4.0
+    webpack-dev-server: ^4.5.0
     webpack-merge: ^5.8.0
   languageName: unknown
   linkType: soft
@@ -3279,9 +3279,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-webpack-plugin@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "eslint-webpack-plugin@npm:3.1.0"
+"eslint-webpack-plugin@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "eslint-webpack-plugin@npm:3.1.1"
   dependencies:
     "@types/eslint": ^7.28.2
     jest-worker: ^27.3.1
@@ -3291,7 +3291,7 @@ __metadata:
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0
     webpack: ^5.0.0
-  checksum: c6858e5f28d0ca5c5982a7a00cad99a25a8e117f90a662c5f550722f31ef8057ef1cf0cf1b89da249032437a61d917ab7623cb1ff4677cb4886aa2b010ecfdb0
+  checksum: 4ff3f3fc8f03a187792f783513c3f4274221623d5f5c16ca90542c1b781fd04ed646ab6043caa55a51a654d5ab2c7039677faedee8bfb526d1310edc3909cbd2
   languageName: node
   linkType: hard
 
@@ -7881,9 +7881,9 @@ typescript@^4.4.4:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "webpack-dev-server@npm:4.4.0"
+"webpack-dev-server@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "webpack-dev-server@npm:4.5.0"
   dependencies:
     ansi-html-community: ^0.0.8
     bonjour: ^3.5.0
@@ -7917,7 +7917,7 @@ typescript@^4.4.4:
       optional: true
   bin:
     webpack-dev-server: bin/webpack-dev-server.js
-  checksum: c317b5029b6f8caad47a257edb68b2dad5cd7087f4481ebda3359701c981037ce387486bdf992fb6e23213685d8e25e306b25a62541a42d0154562b1999563a5
+  checksum: 9167420dd0d3e836058154d58ec78c7c53f26652f51785d91a01e4fde24290dab86533a39e069b4087dc8460b1cb0ba8128239ebf21de4f100f08ee238ac58a3
   languageName: node
   linkType: hard
 
@@ -7985,9 +7985,9 @@ typescript@^4.4.4:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.63.0":
-  version: 5.63.0
-  resolution: "webpack@npm:5.63.0"
+"webpack@npm:^5.64.0":
+  version: 5.64.0
+  resolution: "webpack@npm:5.64.0"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -8018,7 +8018,7 @@ typescript@^4.4.4:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 8127be3d900d8e57f106f61dc66f8334162d5425d770f46b2110c89057c1607e9be1a20fa37ee53bd6915e3041dc074c5e2aa99665abb18112463b91606946f7
+  checksum: 9d32a61d988b0cd34f7c2b9006ac2eec81c36a72acf3b7f01c6c567c2ebc95bb75d422a53a5bea69c36dbfc50c11ac953ec07742da43c55beb512d0f2d4bb400
   languageName: node
   linkType: hard
 
