@@ -3,8 +3,8 @@ const HtmlWebpackTagsPlugin = require("html-webpack-tags-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const chalk = require("chalk");
 const Dotenv = require("dotenv-webpack");
-const ProgressPlugin = require("webpack").ProgressPlugin;
 const path = require("path");
+const WebpackBar = require("webpackbar");
 
 const env = process.env.NODE_ENV ? `.env.${process.env.NODE_ENV}` : ".env";
 const mode = /production/g.test(env) ? "production" : "development";
@@ -81,11 +81,14 @@ module.exports = {
     plugins: [
       mode === "development" &&
         new HtmlWebpackTagsPlugin({ tags: ["dll/index.js"], append: false }),
-      mode === "development" && new ProgressPlugin({}),
       new Dotenv({
         systemvars: true,
         safe: true,
         path: env,
+      }),
+      new WebpackBar({
+        reporters: [mode !== "development" ? "profile" : "fancy"],
+        profile: mode !== "development",
       }),
     ].filter((p) => p),
     optimization: {

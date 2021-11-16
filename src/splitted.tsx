@@ -5,8 +5,8 @@ const Div = styled.div`
   background-color: greenyellow;
 `;
 
-const TestComponent: React.FC = () => {
+const SplittedComponent: React.FC = () => {
   return <Div>Splitted Component!</Div>;
 };
 
-export default TestComponent;
+export default SplittedComponent;
