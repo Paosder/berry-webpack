@@ -51,6 +51,7 @@ module.exports = {
       2,
       { namedComponents: "arrow-function" },
     ],
+    "@typescript-eslint/ban-ts-comment": "off",
   },
   ignorePatterns: [
     "node_modules",
@@ -62,7 +63,6 @@ module.exports = {
     "esbuild.*",
     "setup.js",
     "*.test.*",
-    "*.spec.*",
     "*.cjs",
   ],
 };

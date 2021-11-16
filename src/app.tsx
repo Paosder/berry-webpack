@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import styled from "styled-components";
 import test from "./test.json";
 
-const OtherComponent = React.lazy(() => import("./test"));
+const OtherComponent = React.lazy(() => import("./splitted"));
 
 const TestDiv = styled.div`
   background-color: yellow;
