@@ -41,7 +41,7 @@ const generateDLL = (resolve, reject) => {
         fs.mkdirSync(path.join(__dirname, DLL_PATH), {
           recursive: true,
         });
-        fs.writeFileSync(DLL_JSON_PATH, JSON.stringify(newVersion));
+        fs.writeFileSync(DLL_JSON_PATH, JSON.stringify(newVersion, null, "\t"));
         console.log("");
         console.log(chalk.green`[DLL] Generated successfully.`);
         console.log(chalk.green`[DLL] 🚀 Ready to Launch! 🚀`);

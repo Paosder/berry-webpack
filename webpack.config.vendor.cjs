@@ -2,13 +2,14 @@ const webpack = require("webpack");
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const WebpackBar = require("webpackbar");
+const package = require("./package.json");
 
 /** @type { import('webpack').Configuration } */
 module.exports = {
   mode: "development",
   devtool: "source-map",
   entry: {
-    vendor: ["react", "react-dom", "styled-components"],
+    vendor: Object.keys(package.dependencies),
   },
   output: {
     path: path.resolve(__dirname, "dll"),
