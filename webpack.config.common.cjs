@@ -5,6 +5,26 @@ const chalk = require("chalk");
 const Dotenv = require("dotenv-webpack");
 const path = require("path");
 const WebpackBar = require("webpackbar");
+const tsconfig = require("./tsconfig.json");
+
+const getAliasFromTSconfig = () => {
+  if (tsconfig.compilerOptions && tsconfig.compilerOptions.paths) {
+    return Object.keys(tsconfig.compilerOptions.paths).reduce(
+      (alias, aliasPath) => {
+        const escapedPath = aliasPath.replace(/\/\*/g, "");
+        alias[escapedPath] = [
+          path.resolve(
+            __dirname,
+            tsconfig.compilerOptions.paths[aliasPath][0].replace(/\/\*/g, "")
+          ),
+        ];
+        return alias;
+      },
+      {}
+    );
+  }
+  return {};
+};
 
 const env = process.env.NODE_ENV ? `.env.${process.env.NODE_ENV}` : ".env";
 const mode = /production/g.test(env) ? "production" : "development";
@@ -30,7 +50,7 @@ module.exports = {
     },
     resolve: {
       extensions: [".ts", ".js", ".jsx", ".tsx"],
-      alias: {},
+      alias: getAliasFromTSconfig(),
     },
     entry: {
       main: path.resolve(__dirname, "./src/index.tsx"),
