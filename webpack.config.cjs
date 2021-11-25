@@ -50,6 +50,10 @@ const config = {
     compress: true,
     host: "0.0.0.0",
     hot: true,
+    historyApiFallback: {
+      index: "/",
+      disableDotRule: true,
+    },
   },
 };
 

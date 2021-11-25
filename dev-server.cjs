@@ -1,4 +1,3 @@
-const semver = require("semver");
 const chalk = require("chalk");
 const path = require("path");
 const fs = require("fs");
@@ -19,6 +18,7 @@ const UNKNOWN_VENDOR_ERROR = "ENODEPS";
 const DLL_PATH = "./dll";
 const DLL_JSON = "version.json";
 const DLL_JSON_PATH = path.join(__dirname, DLL_PATH, DLL_JSON);
+const localDllList = require("./local-dll.cjs");
 // ---------------------------------------------------------------
 
 const generateDLL = (resolve, reject) => {
@@ -32,11 +32,19 @@ const generateDLL = (resolve, reject) => {
     } else {
       let lastDepsName = "";
       try {
-        const newVersion = vendors.reduce((acc, el) => {
-          console.log(`${el}: ${packages[el]}`);
-          lastDepsName = el;
-          acc[el] = packages[el].replace("^", ""); // ! error can occurs in here when user puts wrong name of deps.
-          return acc;
+        const newVersion = vendors.reduce((vendorCandidates, vendor) => {
+          lastDepsName = vendor;
+          if (localDllList[vendor]) {
+            const nextVersion =
+              typeof localDllList[vendor] === "string"
+                ? localDllList[vendor]
+                : localDllList[vendor]();
+            vendorCandidates[vendor] = nextVersion;
+          } else {
+            console.log(`${vendor}: ${packages[vendor]}`);
+            vendorCandidates[vendor] = packages[vendor].replace(/[\^~]/, ""); // ! error can occurs in here when user puts wrong name of deps.
+          }
+          return vendorCandidates;
         }, {});
         fs.mkdirSync(path.join(__dirname, DLL_PATH), {
           recursive: true,
@@ -75,10 +83,24 @@ const bootstrap = () => {
       const versionInfos = JSON.parse(
         fs.readFileSync(DLL_JSON_PATH).toString("utf-8")
       );
+      if (vendors.length !== Object.keys(versionInfos).length) {
+        console.log(chalk.green`[DLL] Deps length changed. Refresh...`);
+        return generateDLL(resolve, reject);
+      }
       if (
         vendors.every((vendor) => {
           lastDepsName = vendor;
-          const currentVersion = packages[vendor].replace("^", ""); // ! error can occurs in here when user puts wrong name of deps.
+          let currentVersion;
+          if (localDllList[vendor]) {
+            // local dll.
+            currentVersion =
+              typeof localDllList[vendor] === "string"
+                ? localDllList[vendor]
+                : localDllList[vendor]();
+          } else {
+            // external package.
+            currentVersion = packages[vendor].replace(/[\^~]/, ""); // ! error can occurs in here when user puts wrong name of deps.
+          }
           const cacheVersion = versionInfos[vendor];
 
           if (!currentVersion) {
@@ -91,7 +113,7 @@ const bootstrap = () => {
           } else if (!cacheVersion) {
             // no cache found.
             return false;
-          } else if (semver.lt(cacheVersion, currentVersion)) {
+          } else if (cacheVersion !== currentVersion) {
             // outdated.
             return false;
           }
