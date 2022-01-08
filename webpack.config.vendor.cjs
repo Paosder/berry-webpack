@@ -8,7 +8,7 @@ const common = require("./webpack.config.common.cjs");
 
 /** @type { import('webpack').Configuration } */
 module.exports = {
-  mode: common.mode,
+  mode: common.config.mode,
   devtool: "source-map",
   entry: {
     vendor: Object.keys(package.dependencies).concat(Object.keys(localDll)),
