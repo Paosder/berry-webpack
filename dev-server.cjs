@@ -1,4 +1,4 @@
-const chalk = require("chalk");
+const ansis = require("ansis");
 const path = require("path");
 const fs = require("fs");
 const packages = require("./package.json").dependencies;
@@ -22,12 +22,12 @@ const localDllList = require("./local-dll.cjs");
 // ---------------------------------------------------------------
 
 const generateDLL = (resolve, reject) => {
-  console.log(chalk.green`⏳ Generating DLL...`);
+  console.log(ansis.green(`⏳ Generating DLL...`));
 
   const compiler = webpack(vendorConfig);
   compiler.run((e) => {
     if (e) {
-      console.log(chalk.red`${e}`);
+      console.log(ansis.red(`${e}`));
       reject(e);
     } else {
       let lastDepsName = "";
@@ -51,18 +51,20 @@ const generateDLL = (resolve, reject) => {
         });
         fs.writeFileSync(DLL_JSON_PATH, JSON.stringify(newVersion, null, "\t"));
         console.log("");
-        console.log(chalk.green`[DLL] Generated successfully.`);
-        console.log(chalk.green`[DLL] 🚀 Ready to Launch! 🚀`);
+        console.log(ansis.green(`[DLL] Generated successfully.`));
+        console.log(ansis.green(`[DLL] 🚀 Ready to Launch! 🚀`));
         resolve();
       } catch (err) {
         if (err instanceof Error) {
-          console.log(chalk.red`[DLL] 🚨 Write Error! ${err.message}`);
+          console.log(ansis.red(`[DLL] 🚨 Write Error! ${err.message}`));
           if (
             err.message.includes("Cannot read property 'replace' of undefined")
           ) {
             // Seems wrong name error.
             console.log(
-              chalk.yellow`[DLL] Seems you put wrong deps name: "${lastDepsName}"`
+              ansis.yellow(
+                `[DLL] Seems you put wrong deps name: "${lastDepsName}"`
+              )
             );
           }
         }
@@ -70,7 +72,7 @@ const generateDLL = (resolve, reject) => {
       }
     }
     compiler.close(() => {
-      console.log(chalk.grey`[DLL] Compiler Closed.`);
+      console.log(ansis.gray(`[DLL] Compiler Closed.`));
     });
   });
 };
@@ -84,7 +86,7 @@ const bootstrap = () => {
         fs.readFileSync(DLL_JSON_PATH).toString("utf-8")
       );
       if (vendors.length !== Object.keys(versionInfos).length) {
-        console.log(chalk.green`[DLL] Deps length changed. Refresh...`);
+        console.log(ansis.green(`[DLL] Deps length changed. Refresh...`));
         return generateDLL(resolve, reject);
       }
       if (
@@ -120,33 +122,35 @@ const bootstrap = () => {
           return true;
         })
       ) {
-        console.log(chalk.green`[DLL] Already up to date.`);
+        console.log(ansis.green(`[DLL] Already up to date.`));
         resolve();
       } else {
-        console.log(chalk.green`[DLL] Refresh...`);
+        console.log(ansis.green(`[DLL] Refresh...`));
         return generateDLL(resolve, reject);
       }
     } catch (e) {
       if (e instanceof Error) {
         if (e.message.includes("ENOENT")) {
           // version file not found when first init.
-          console.log(chalk.green`[DLL] Init...`);
+          console.log(ansis.green(`[DLL] Init...`));
           return generateDLL(resolve, reject);
         }
-        console.log(chalk.red`[DLL] Bootstrap Failed! ${e.message}`);
+        console.log(ansis.red(`[DLL] Bootstrap Failed! ${e.message}`));
         if (e.name === UNKNOWN_VENDOR_ERROR) {
           // unknown deps.
-          console.log(chalk.red`[DLL] Please check vendor names.`);
+          console.log(ansis.red(`[DLL] Please check vendor names.`));
         } else if (
           e.message.includes("Cannot read property 'replace' of undefined")
         ) {
           // Seems wrong name error.
           console.log(
-            chalk.yellow`[DLL] Seems you put wrong deps name: "${lastDepsName}"`
+            ansis.yellow(
+              `[DLL] Seems you put wrong deps name: "${lastDepsName}"`
+            )
           );
         } else {
           // unknown error.
-          console.log(chalk.red`Unknown Bootstrap Error! Please report!`);
+          console.log(ansis.red`Unknown Bootstrap Error! Please report!`);
         }
         reject(e);
       }
@@ -163,5 +167,5 @@ bootstrap()
     devServer.start();
   })
   .catch(() => {
-    console.log(chalk.red`Failed to bootstrap.`);
+    console.log(ansis.red(`Failed to bootstrap.`));
   });

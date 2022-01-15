@@ -1,19 +1,11 @@
 module.exports = {
-  plugins: ["@typescript-eslint", "prettier"],
-  extends: [
-    "plugin:@typescript-eslint/recommended",
-    "airbnb",
-    "prettier",
-    "react-app",
-  ],
+  plugins: ["prettier"],
+  extends: ["prettier", "react-app"],
   settings: {
-    "import/extensions": [".js", ".ts", ".d.ts"],
-    "import/parsers": {
-      "@typescript-eslint/parser": [".js", ".ts", ".jsx", ".tsx"],
-    },
+    "import/extensions": [".js", ".ts", ".d.ts", ".mjs"],
     "import/resolver": {
       node: {
-        extensions: [".js", ".ts", ".jsx", ".tsx"],
+        extensions: [".js", ".ts", ".jsx", ".tsx", ".mjs"],
       },
     },
   },

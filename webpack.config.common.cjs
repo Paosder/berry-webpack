@@ -1,7 +1,7 @@
 // common config
 const HtmlWebpackTagsPlugin = require("html-webpack-tags-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const chalk = require("chalk");
+const ansis = require("ansis");
 const Dotenv = require("dotenv-webpack");
 const path = require("path");
 const WebpackBar = require("webpackbar");
@@ -30,9 +30,9 @@ const env = process.env.NODE_ENV ? `.env.${process.env.NODE_ENV}` : ".env";
 const mode = /production/g.test(env) ? "production" : "development";
 
 console.clear();
-console.log(chalk.bold.bgGrey(`Using ${env}...`));
+console.log(ansis.bold(`Using ${env}...`));
 console.log(
-  chalk.grey(`Webpack starts with ${mode} mode...
+  ansis.gray(`Webpack starts with ${mode} mode...
 `)
 );
 
