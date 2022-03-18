@@ -26,7 +26,7 @@ const config = {
     }),
   ],
   stats: "minimal",
-  devtool: "inline-source-map",
+  devtool: "source-map",
   devServer: {
     static: [
       {
