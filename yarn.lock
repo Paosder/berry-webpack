@@ -3354,14 +3354,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsdom@npm:^16.2.14":
-  version: 16.2.14
-  resolution: "@types/jsdom@npm:16.2.14"
+"@types/jsdom@npm:^20.0.0":
+  version: 20.0.0
+  resolution: "@types/jsdom@npm:20.0.0"
   dependencies:
     "@types/node": "*"
-    "@types/parse5": "*"
     "@types/tough-cookie": "*"
-  checksum: 12bb926fa74ea07c0ba0bfd5bf185ac0fd771b28666a5e8784b9af4bb96bb0c51fc5f494eff7da1d3cd804e4757f640a23c344c1cd5d188f95ab0ab51770d88b
+    parse5: ^7.0.0
+  checksum: 13e67d31347e02d46ec6a23919b3ce39d86136665922a2a6cb977e216a2f46c22d2f025d0586a64ab492ebaa5f43da669b6f173a5a8cfd3e3bb7c9d19b6cfa9e
   languageName: node
   linkType: hard
 
@@ -3432,13 +3432,6 @@ __metadata:
   version: 4.0.0
   resolution: "@types/parse-json@npm:4.0.0"
   checksum: fd6bce2b674b6efc3db4c7c3d336bd70c90838e8439de639b909ce22f3720d21344f52427f1d9e57b265fcb7f6c018699b99e5e0c208a1a4823014269a6bf35b
-  languageName: node
-  linkType: hard
-
-"@types/parse5@npm:*":
-  version: 6.0.2
-  resolution: "@types/parse5@npm:6.0.2"
-  checksum: ab21fa73091ca44fa5a3e3beb6549e07f6a8f08b65f12d10c9c1302927c67424e18e897d641fd59fc1f04d8c2c8382b4b3235e145e4d6958f559a7ef5956c323
   languageName: node
   linkType: hard
 
@@ -4758,7 +4751,7 @@ __metadata:
     "@swc/core": ^1.2.163
     "@swc/jest": ^0.2.20
     "@types/jest": ^28.0.0
-    "@types/jsdom": ^16.2.14
+    "@types/jsdom": ^20.0.0
     "@types/node": ^18.0.0
     "@types/react": ^18.0.0
     "@types/react-dom": ^18.0.0
@@ -4774,7 +4767,7 @@ __metadata:
     cross-env: ^7.0.3
     css-loader: ^6.7.1
     dotenv: ^16.0.0
-    dotenv-webpack: ^7.1.0
+    dotenv-webpack: ^8.0.0
     eslint: ^8.12.0
     eslint-config-prettier: ^8.5.0
     eslint-config-react-app: ^7.0.0
@@ -5974,14 +5967,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv-webpack@npm:^7.1.0":
-  version: 7.1.0
-  resolution: "dotenv-webpack@npm:7.1.0"
+"dotenv-webpack@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "dotenv-webpack@npm:8.0.0"
   dependencies:
     dotenv-defaults: ^2.0.2
   peerDependencies:
     webpack: ^4 || ^5
-  checksum: e69f5b5de16f99a0acc35f2bc75e1dd40a587053cdb62ffb2fe80cea197ba703a829771f6db270a01e96ca8f52c8160671c243875a7b9c7c040bc32fc3d400f1
+  checksum: 1ca629608b818ba927b54044a0ff02f089733c1acc8e9fa10e037cc5157867f63a825850965a91377814879509544ae8e0742e67bd3ed9ea51bd2b8eed755201
   languageName: node
   linkType: hard
 
@@ -11908,7 +11901,7 @@ resolve@^2.0.0-next.3:
 
 "typescript@patch:typescript@^4.6.3#~builtin<compat/typescript>":
   version: 4.6.3
-  resolution: "typescript@patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=7ad353"
+  resolution: "typescript@patch:typescript@npm%3A4.6.3#~builtin<compat/typescript>::version=4.6.3&hash=f456af"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
@@ -11918,7 +11911,7 @@ resolve@^2.0.0-next.3:
 
 "typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
   version: 4.7.4
-  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=7ad353"
+  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
