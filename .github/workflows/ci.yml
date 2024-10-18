@@ -14,21 +14,21 @@ jobs:
         node-version: [12.x, 14.x, 16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set sample env files
         run: |
           cp .env.example .env
           cp .env.example .env.development
           cp .env.example .env.production
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install deps
-        uses: borales/actions-yarn@v3.0.0
+        uses: borales/actions-yarn@v5.0.0
         with:
           cmd: install # will run `yarn install` command
       - name: build
-        uses: borales/actions-yarn@v3.0.0
+        uses: borales/actions-yarn@v5.0.0
         with:
           cmd: build # will run `yarn build` command
